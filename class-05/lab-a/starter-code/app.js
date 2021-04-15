@@ -108,7 +108,9 @@ function multiplyArray(multArr) { //eslint-disable-line
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an 
+array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows 
+this example and concatenates a message using the arguments that were passed into the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
@@ -119,13 +121,16 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
+let b=0;
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
-
+function multiplys(array){for(let i=0;i<array.length();i++){b=b*array[i];return b;}}
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  let result=multiplys(testDynamicArray);
+  let msg=testDynamicArray[1]+' '+testDynamicArray[2]+' '+testDynamicArray[3]+' '+testDynamicArray[4]+' '+testDynamicArray[5]+'  was passed in as an array of numbers, and '+ result +' is their multiply.';
+  return [result,msg];
 }
-
+multiplyAnyArray(testDynamicArray);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyAnyArray(testDynamicArray);
-
+console.log(multiplyAnyArray(testDynamicArray));
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
